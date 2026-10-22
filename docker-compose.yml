@@ -1,0 +1,4 @@
+services:
+  weechat:
+    image: weechat/weechat:4-slim
+    command: ["weechat-headless", "--stdout"]
