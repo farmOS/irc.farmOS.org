@@ -7,3 +7,4 @@ services:
     volumes:
       - ./config/weechat/:/home/user/.config/weechat
       - ./logs:/logs
+    restart: unless-stopped
