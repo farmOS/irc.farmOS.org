@@ -33,6 +33,12 @@ irc.oftc.net user password).
 /set irc.server.oftc.autorejoin on
 ```
 
+Hide the IRC client name and version when quitting.
+
+```sh
+/set irc.ctcp.version ""
+```
+
 Quit the TUI.
 
 ```sh
