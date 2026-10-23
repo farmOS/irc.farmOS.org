@@ -6,3 +6,4 @@ services:
       TZ: UTC
     volumes:
       - ./config/weechat/:/home/user/.config/weechat
+      - ./logs:/logs
