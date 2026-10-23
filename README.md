@@ -22,6 +22,17 @@ Configure the logger.
 /set logger.file.path /logs
 ```
 
+Configure the IRC server connection (replace `<password>` with the `farmBOT`
+irc.oftc.net user password).
+
+```sh
+/server add oftc irc.oftc.net/6697 -autoconnect
+/set irc.server.oftc.nicks farmBOT
+/set irc.server.oftc.command /msg NickServ IDENTIFY <password> 
+/set irc.server.oftc.autojoin #farmOS
+/set irc.server.oftc.autorejoin on
+```
+
 Quit the TUI.
 
 ```sh
