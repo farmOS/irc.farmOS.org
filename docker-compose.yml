@@ -4,3 +4,5 @@ services:
     command: ["weechat-headless", "--stdout"]
     environment:
       TZ: UTC
+    volumes:
+      - ./config/weechat/:/home/user/.config/weechat
