@@ -10,7 +10,10 @@ RUN apt-get update \
 		build-essential \
 		git \
 		libssl-dev \
+		npm \
 		pkg-config \
+		sassc \
+	&& npm install -g typescript@4.4 \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& git clone --depth 1 --branch ${IRCJOURNAL_REF} \
 		https://github.com/zopieux/ircjournal.git /src
@@ -24,8 +27,8 @@ RUN cargo update -p time --precise 0.3.36
 # SQLX_OFFLINE makes sqlx use the checked-in sqlx-data.json.
 ENV SQLX_OFFLINE=1
 
-# Build ircj-watch.
-RUN cargo build --release -p ircj-watch
+# Build the workspace.
+RUN cargo build --release
 
 # Start a common runtime environment.
 FROM debian:trixie-slim AS common
@@ -44,3 +47,7 @@ WORKDIR /app
 FROM common AS ircj-watch
 COPY --from=build /src/target/release/ircj-watch /usr/local/bin/ircj-watch
 COPY ircj-watch.toml /app/ircj-watch.toml
+
+# Create the ircj-serve image.
+FROM common AS ircj-serve
+COPY --from=build /src/target/release/ircj-serve /usr/local/bin/ircj-serve

@@ -23,12 +23,28 @@ services:
       retries: 10
     restart: unless-stopped
   ircj-watch:
-    build: services/ircjournal
+    build:
+      context: services/ircjournal
+      target: ircj-watch
     command: ["ircj-watch"]
     environment:
       IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
     volumes:
       - ./logs:/logs:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+  ircj-serve:
+    build:
+      context: services/ircjournal
+      target: ircj-serve
+    command: ["ircj-serve"]
+    environment:
+      IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
+      ROCKET_ADDRESS: 0.0.0.0
+    ports:
+      - "127.0.0.1:8000:8000"
     depends_on:
       db:
         condition: service_healthy
