@@ -8,3 +8,12 @@ services:
       - ./config/weechat/:/home/user/.config/weechat
       - ./logs:/logs
     restart: unless-stopped
+  db:
+    image: postgres:18
+    volumes:
+      - './db:/var/lib/postgresql'
+    environment:
+      POSTGRES_USER: ircj
+      POSTGRES_PASSWORD: ircj
+      POSTGRES_DB: ircj
+    restart: unless-stopped
