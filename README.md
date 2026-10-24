@@ -21,6 +21,7 @@ Configure the logger.
 ```sh
 /set logger.file.time_format %F %T
 /set logger.file.path /logs
+/set logger.file.flush_delay 0
 ```
 
 Configure the IRC server connection (replace `<password>` with the `farmBOT`
