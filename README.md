@@ -19,6 +19,7 @@ docker compose run --rm weechat weechat
 Configure the logger.
 
 ```sh
+/set logger.file.time_format %F %T
 /set logger.file.path /logs
 ```
 

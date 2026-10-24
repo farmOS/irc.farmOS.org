@@ -22,3 +22,14 @@ services:
       timeout: 5s
       retries: 10
     restart: unless-stopped
+  ircj-watch:
+    build: services/ircjournal
+    command: ["ircj-watch"]
+    environment:
+      IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
+    volumes:
+      - ./logs:/logs:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
