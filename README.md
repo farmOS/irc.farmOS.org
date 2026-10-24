@@ -1,5 +1,9 @@
 # irc.farmOS.org
 
+A website that archives conversations in the #farmOS IRC room. Our bot
+(@farmBOT) joins the channel and logs every message, which you can browse and
+search on [irc.farmOS.org](https://irc.farmOS.org).
+
 ## Setup
 
 Create the `config` and `logs` directories and ensure they are owned by user
