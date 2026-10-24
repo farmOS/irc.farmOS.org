@@ -56,3 +56,23 @@ Quit the TUI.
 ```sh
 docker compose up -d
 ```
+
+## History
+
+The #farmOS IRC room was created in 2014. Our faithful bot (@farmBOT) has been
+logging it from the beginning.
+
+- **2014** - The #farmOS IRC room is created on Freenode and the @farmBOT user
+  begins logging via the Drupal [Bot](https://www.drupal.org/project/bot)
+  module.
+- **2018** - The #farmOS Matrix room is created and bridged to the IRC room so
+  that @farmBOT can continue its job.
+- **2021** - The IRC room moves from Freenode to Libera.chat
+  (`irc.libera.chat`).
+- **2024** - The IRC room moves to OFTC (`irc.oftc.net`).
+- **2026** - The bot and website are rewritten from scratch. WeeChat runs in
+  a Docker container as the IRC client and writes log files, which
+  [ircjournal](https://github.com/zopieux/ircjournal) makes browsable and
+  searchable on the web.
+
+Thank you @farmBOT for your many years of dedicated service!
