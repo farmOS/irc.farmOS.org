@@ -107,6 +107,13 @@
         state: present
         update_cache: yes
 
+    - name: Clone the irc.farmOS.org repository.
+      git:
+        repo: https://github.com/farmOS/irc.farmOS.org.git
+        dest: /opt/irc.farmOS.org
+        version: main
+        update: yes
+
   handlers:
 
     - name: Reload UFW
