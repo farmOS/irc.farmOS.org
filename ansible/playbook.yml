@@ -1,0 +1,77 @@
+---
+- name: Provision irc.farmOS.org
+  hosts: irc.farmos.org
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    ansible_user: root
+  become: true
+  tasks:
+
+    - name: Set the server hostname.
+      hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Install packages.
+      apt:
+        package:
+          - fail2ban
+          - git
+          - ufw
+          - unattended-upgrades
+          - vim
+        state: present
+        update_cache: yes
+
+    - name: Adjust APT update intervals.
+      copy:
+        src: apt.conf.d/10periodic
+        dest: /etc/apt/apt.conf.d/10periodic
+        mode: "0444"
+
+    - name: Enable UFW and block all incoming traffic.
+      ufw:
+        state: enabled
+        direction: incoming
+        policy: deny
+      notify: Reload UFW
+
+    - name: Allow SSH traffic.
+      ufw:
+        rule: allow
+        port: "22"
+        proto: tcp
+      notify: Reload UFW
+
+    - name: Block ping requests.
+      replace:
+        path: /etc/ufw/before.rules
+        regexp: '(^-A ufw-before-input -p icmp --icmp-type\s.*\s)(ACCEPT)$'
+        replace: '\1DROP'
+        backup: yes
+      notify: Reload UFW
+
+    - name: Disallow SSH password authentication.
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        regexp: "^PasswordAuthentication"
+        line: "PasswordAuthentication no"
+        state: present
+      notify: Restart SSH
+
+    - name: Remove "PermitRootLogin yes" from /etc/ssh/sshd_config
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        regexp: "^PermitRootLogin"
+        state: absent
+      notify: Restart SSH
+
+  handlers:
+
+    - name: Reload UFW
+      ufw:
+        state: reloaded
+
+    - name: Restart SSH
+      service:
+        name: ssh
+        state: restarted
