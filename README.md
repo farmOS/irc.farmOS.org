@@ -6,10 +6,31 @@ search on [irc.farmOS.org](https://irc.farmOS.org).
 
 ## Setup
 
+Create a Debian server and point the `irc.farmos.org` DNS A record at it.
+
+Add your SSH key to the `root` user's `authorized_keys`.
+
+```sh
+ssh-copy-id root@irc.farmos.org
+```
+
+Provision the server with Ansible.
+
+```sh
+ansible-playbook -i ansible/inventory.yml ansible/playbook.yml
+```
+
+SSH into the server.
+
+```sh
+ssh root@irc.farmos.org
+```
+
 Create the `config` and `logs` directories and ensure they are owned by user
 `1000`.
 
 ```sh
+cd /opt/irc.farmOS.org
 mkdir -p config/weechat logs
 chown -R 1000:1000 config logs
 ```
