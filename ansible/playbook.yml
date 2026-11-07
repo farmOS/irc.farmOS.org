@@ -109,6 +109,20 @@
         state: present
         update_cache: yes
 
+    - name: Install Docker python package.
+      apt:
+        name: python3-docker
+        state: present
+
+    - name: Create a public network for Docker services.
+      docker_network:
+        name: public
+
+    - name: Create a private network for Docker services.
+      docker_network:
+        name: private
+        internal: yes
+
     - name: Clone the irc.farmOS.org repository.
       git:
         repo: https://github.com/farmOS/irc.farmOS.org.git

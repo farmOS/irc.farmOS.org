@@ -14,6 +14,7 @@ Install Ansible (and other dependencies) locally via `pipx`:
 ```sh
 sudo apt-get install pipx
 pipx install --include-deps ansible
+pipx install --include-deps docker
 ```
 
 ## Setup
