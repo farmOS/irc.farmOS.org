@@ -165,6 +165,86 @@
         - irc
         - logger
 
+    - name: Build the ircj-watch image.
+      docker_image:
+        name: ircj-watch
+        source: build
+        build:
+          path: /opt/irc.farmOS.org/services/ircjournal
+          target: ircj-watch
+
+    - name: Build the ircj-serve image.
+      docker_image:
+        name: ircj-serve
+        source: build
+        build:
+          path: /opt/irc.farmOS.org/services/ircjournal
+          target: ircj-serve
+
+    - name: Start the PostgreSQL database container.
+      docker_container:
+        name: db
+        image: postgres:18
+        env:
+          POSTGRES_USER: ircj
+          POSTGRES_PASSWORD: ircj
+          POSTGRES_DB: ircj
+        volumes:
+          - /opt/irc.farmOS.org/db:/var/lib/postgresql
+        networks:
+          - name: private
+        healthcheck:
+          test: ["CMD-SHELL", "pg_isready -U ircj -d ircj"]
+          interval: 5s
+          timeout: 5s
+          retries: 10
+        restart: yes
+        restart_policy: unless-stopped
+
+    - name: Start the WeeChat container.
+      docker_container:
+        name: weechat
+        image: weechat/weechat:4-slim
+        command: weechat-headless --stdout
+        env:
+          TZ: UTC
+        volumes:
+          - /opt/irc.farmOS.org/config/weechat:/home/user/.config/weechat
+          - /opt/irc.farmOS.org/logs:/logs
+        networks:
+          - name: public
+        restart: yes
+        restart_policy: unless-stopped
+
+    - name: Start the ircj-watch container.
+      docker_container:
+        name: ircj-watch
+        image: ircj-watch
+        command: ircj-watch
+        env:
+          IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
+        volumes:
+          - /opt/irc.farmOS.org/logs:/logs:ro
+        networks:
+          - name: private
+        restart: yes
+        restart_policy: unless-stopped
+
+    - name: Start the ircj-serve container.
+      docker_container:
+        name: ircj-serve
+        image: ircj-serve
+        command: ircj-serve
+        env:
+          IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
+          ROCKET_ADDRESS: 0.0.0.0
+        published_ports:
+          - "127.0.0.1:8000:8000/tcp"
+        networks:
+          - name: private
+        restart: yes
+        restart_policy: unless-stopped
+
   handlers:
 
     - name: Reload UFW

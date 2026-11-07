@@ -17,7 +17,7 @@ pipx install --include-deps ansible
 pipx install --include-deps docker
 ```
 
-## Setup
+## Deployment
 
 Create a Debian server and point the `irc.farmos.org` DNS A record at it.
 
@@ -39,16 +39,6 @@ Provision the server with Ansible.
 
 ```sh
 ansible-playbook -i ansible/inventory.yml ansible/playbook.yml
-```
-
-## Usage
-
-SSH into the server and start the stack.
-
-```sh
-ssh root@irc.farmos.org
-cd /opt/irc.farmOS.org
-docker compose up -d
 ```
 
 ## History
