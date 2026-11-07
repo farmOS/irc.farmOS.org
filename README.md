@@ -4,6 +4,18 @@ A website that archives conversations in the #farmOS IRC room. Our bot
 (@farmBOT) joins the channel and logs every message, which you can browse and
 search on [irc.farmOS.org](https://irc.farmOS.org).
 
+## Prerequisites
+
+[Ansible](https://www.ansible.com/) is used for provisioning the
+`irc.farmos.org` server.
+
+Install Ansible (and other dependencies) locally via `pipx`:
+
+```sh
+sudo apt-get install pipx
+pipx install --include-deps ansible
+```
+
 ## Setup
 
 Create a Debian server and point the `irc.farmos.org` DNS A record at it.
