@@ -51,6 +51,13 @@
         proto: tcp
       notify: Reload UFW
 
+    - name: Allow HTTPS traffic.
+      ufw:
+        rule: allow
+        port: "443"
+        proto: tcp
+      notify: Reload UFW
+
     - name: Block ping requests.
       replace:
         path: /etc/ufw/before.rules
@@ -263,6 +270,17 @@
         restart: yes
         restart_policy: unless-stopped
 
+    - name: Create directory for TLS certificates.
+      file:
+        path: /opt/irc.farmOS.org/certs
+        state: directory
+        mode: "0700"
+
+    - name: Create self-signed certificates.
+      shell:
+        cmd: "openssl req -x509 -newkey rsa:4096 -nodes -keyout /opt/irc.farmOS.org/certs/irc.farmos.org.key -out /opt/irc.farmOS.org/certs/irc.farmos.org.chain.crt -subj '/CN=irc.farmos.org' -addext 'subjectAltName=DNS:irc.farmos.org'"
+        creates: "/opt/irc.farmOS.org/certs/irc.farmos.org.chain.crt"
+
     - name: Deploy Nginx configuration.
       copy:
         src: nginx.conf
@@ -275,11 +293,13 @@
         image: nginx
         published_ports:
           - "80:80"
+          - "443:443"
         networks:
           - name: public
             ipv4_address: 172.20.0.5
         volumes:
           - /opt/irc.farmOS.org/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+          - /opt/irc.farmOS.org/certs:/etc/nginx/certs:ro
         restart: yes
         restart_policy: unless-stopped
 
