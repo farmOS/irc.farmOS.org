@@ -1,0 +1,10 @@
+[server]
+oftc.addresses = "{{ irc_addresses }}"
+oftc.autoconnect = on
+oftc.nicks = "{{ irc_nicks }}"
+oftc.command = "/msg NickServ IDENTIFY {{ irc_password }}"
+oftc.autojoin = "{{ irc_autojoin }}"
+oftc.autorejoin = on
+
+[ctcp]
+version = ""

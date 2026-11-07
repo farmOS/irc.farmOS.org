@@ -1,3 +1,4 @@
 config/
 db/
 logs/
+ansible/vars.yml

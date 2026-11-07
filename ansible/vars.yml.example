@@ -1,0 +1,7 @@
+---
+# Copy this file to ansible/vars.yml and set the real values.
+# ansible/vars.yml is gitignored and never committed.
+irc_addresses: "irc.oftc.net/6697"
+irc_nicks: "farmBOT"
+irc_password: "CHANGE_ME"
+irc_autojoin: "#farmOS"

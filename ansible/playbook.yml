@@ -4,6 +4,8 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
     ansible_user: root
+  vars_files:
+    - vars.yml
   become: true
   tasks:
 
@@ -113,6 +115,41 @@
         dest: /opt/irc.farmOS.org
         version: main
         update: yes
+
+    - name: Ensure the WeeChat variables are set.
+      assert:
+        that:
+          - item is defined
+          - item | length > 0
+        fail_msg: Set {{ item }} in ansible/vars.yml (see ansible/vars.yml.example).
+        quiet: true
+      loop:
+        - irc_addresses
+        - irc_nicks
+        - irc_password
+        - irc_autojoin
+
+    - name: Create config and logs directories.
+      file:
+        path: /opt/irc.farmOS.org/{{ item }}
+        state: directory
+        owner: "1000"
+        group: "1000"
+        mode: "0755"
+      loop:
+        - config/weechat
+        - logs
+
+    - name: Deploy WeeChat configuration.
+      template:
+        src: weechat/{{ item }}.conf.j2
+        dest: /opt/irc.farmOS.org/config/weechat/{{ item }}.conf
+        owner: "1000"
+        group: "1000"
+        mode: "0600"
+      loop:
+        - irc
+        - logger
 
   handlers:
 
