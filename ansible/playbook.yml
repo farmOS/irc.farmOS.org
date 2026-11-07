@@ -44,6 +44,13 @@
         proto: tcp
       notify: Reload UFW
 
+    - name: Allow HTTP traffic.
+      ufw:
+        rule: allow
+        port: "80"
+        proto: tcp
+      notify: Reload UFW
+
     - name: Block ping requests.
       replace:
         path: /etc/ufw/before.rules
@@ -151,6 +158,7 @@
         group: "1000"
         mode: "0755"
       loop:
+        - config/nginx
         - config/weechat
         - logs
 
@@ -238,10 +246,28 @@
         env:
           IRCJ_DB: postgres://ircj:ircj@db:5432/ircj
           ROCKET_ADDRESS: 0.0.0.0
-        published_ports:
-          - "127.0.0.1:8000:8000/tcp"
         networks:
+          - name: public
           - name: private
+        restart: yes
+        restart_policy: unless-stopped
+
+    - name: Deploy Nginx configuration.
+      copy:
+        src: nginx.conf
+        dest: /opt/irc.farmOS.org/config/nginx/default.conf
+        mode: "0700"
+
+    - name: Start the proxy container.
+      docker_container:
+        name: proxy
+        image: nginx
+        published_ports:
+          - "80:80"
+        networks:
+          - name: public
+        volumes:
+          - /opt/irc.farmOS.org/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
         restart: yes
         restart_policy: unless-stopped
 
