@@ -124,11 +124,17 @@
     - name: Create a public network for Docker services.
       docker_network:
         name: public
+        ipam_config:
+          - subnet: 172.20.0.0/16
+            gateway: 172.20.0.1
 
     - name: Create a private network for Docker services.
       docker_network:
         name: private
         internal: yes
+        ipam_config:
+          - subnet: 172.21.0.0/16
+            gateway: 172.21.0.1
 
     - name: Clone the irc.farmOS.org repository.
       git:
@@ -201,6 +207,7 @@
           - /opt/irc.farmOS.org/db:/var/lib/postgresql
         networks:
           - name: private
+            ipv4_address: 172.21.0.2
         healthcheck:
           test: ["CMD-SHELL", "pg_isready -U ircj -d ircj"]
           interval: 5s
@@ -221,6 +228,7 @@
           - /opt/irc.farmOS.org/logs:/logs
         networks:
           - name: public
+            ipv4_address: 172.20.0.2
         restart: yes
         restart_policy: unless-stopped
 
@@ -235,6 +243,7 @@
           - /opt/irc.farmOS.org/logs:/logs:ro
         networks:
           - name: private
+            ipv4_address: 172.21.0.3
         restart: yes
         restart_policy: unless-stopped
 
@@ -248,7 +257,9 @@
           ROCKET_ADDRESS: 0.0.0.0
         networks:
           - name: public
+            ipv4_address: 172.20.0.4
           - name: private
+            ipv4_address: 172.21.0.4
         restart: yes
         restart_policy: unless-stopped
 
@@ -266,6 +277,7 @@
           - "80:80"
         networks:
           - name: public
+            ipv4_address: 172.20.0.5
         volumes:
           - /opt/irc.farmOS.org/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
         restart: yes
