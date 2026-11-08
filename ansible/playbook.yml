@@ -362,6 +362,27 @@
         user: root
         job: "docker run --rm --name certbot -v '/etc/letsencrypt:/etc/letsencrypt' -v '/var/log/letsencrypt:/var/log/letsencrypt' -v '/var/www/letsencrypt:/var/www/letsencrypt' certbot/certbot renew && docker exec proxy service nginx reload > /dev/null"
 
+    - name: Create the backup directory.
+      file:
+        path: /opt/irc.farmOS.org/backups
+        state: directory
+        mode: "0700"
+
+    - name: Deploy the database backup script.
+      copy:
+        src: backup.sh
+        dest: /opt/irc.farmOS.org/backups/backup.sh
+        mode: "0700"
+
+    - name: Back up the database weekly via cron.
+      cron:
+        name: "Back up the database weekly."
+        weekday: "0"
+        hour: "3"
+        minute: "15"
+        user: root
+        job: "/opt/irc.farmOS.org/backups/backup.sh > /opt/irc.farmOS.org/backups/backup.log 2>&1"
+
   handlers:
 
     - name: Reload proxy
