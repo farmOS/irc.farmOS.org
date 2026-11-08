@@ -281,6 +281,12 @@
         cmd: "openssl req -x509 -newkey rsa:4096 -nodes -keyout /opt/irc.farmOS.org/certs/irc.farmos.org.key -out /opt/irc.farmOS.org/certs/irc.farmos.org.chain.crt -subj '/CN=irc.farmos.org' -addext 'subjectAltName=DNS:irc.farmos.org'"
         creates: "/opt/irc.farmOS.org/certs/irc.farmos.org.chain.crt"
 
+    - name: Create directory for Let's Encrypt webroot.
+      file:
+        path: /var/www/letsencrypt
+        state: directory
+        mode: "0755"
+
     - name: Deploy Nginx configuration.
       copy:
         src: nginx.conf
@@ -300,10 +306,66 @@
         volumes:
           - /opt/irc.farmOS.org/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
           - /opt/irc.farmOS.org/certs:/etc/nginx/certs:ro
+          - /var/www/letsencrypt:/var/www/letsencrypt:ro
+          - /etc/letsencrypt:/etc/letsencrypt:ro
         restart: yes
         restart_policy: unless-stopped
 
+    - name: Check if Let's Encrypt certificate exists.
+      stat:
+        path: /etc/letsencrypt/live/irc.farmos.org
+      register: le_cert
+
+    - name: Request a Let's Encrypt SSL certificate with the HTTP-01 challenge.
+      docker_container:
+        name: certbot_irc_farmos_org
+        image: certbot/certbot
+        command: certonly --email admin@farmOS.org --agree-tos --webroot --webroot-path /var/www/letsencrypt -d irc.farmos.org
+        volumes:
+          - /etc/letsencrypt:/etc/letsencrypt
+          - /var/www/letsencrypt:/var/www/letsencrypt
+        networks:
+          - name: public
+        detach: no
+        auto_remove: yes
+      when: not le_cert.stat.exists
+      notify: Reload proxy
+
+    - name: Check the Let's Encrypt certificate files.
+      stat:
+        path: /etc/letsencrypt/live/irc.farmos.org/fullchain.pem
+      register: le_cert
+
+    - name: Symlink to the Let's Encrypt privkey.pem.
+      file:
+        src: /etc/letsencrypt/live/irc.farmos.org/privkey.pem
+        dest: /opt/irc.farmOS.org/certs/irc.farmos.org.key
+        state: link
+        force: yes
+        follow: no
+      when: le_cert.stat.exists
+
+    - name: Symlink to the Let's Encrypt fullchain.pem.
+      file:
+        src: /etc/letsencrypt/live/irc.farmos.org/fullchain.pem
+        dest: /opt/irc.farmOS.org/certs/irc.farmos.org.chain.crt
+        state: link
+        force: yes
+        follow: no
+      when: le_cert.stat.exists
+    
+    - name: Renew Let's Encrypt certificates via cron.
+      cron:
+        name: "Renew Let's Encrypt certificates."
+        hour: "2"
+        minute: "16"
+        user: root
+        job: "docker run --rm --name certbot -v '/etc/letsencrypt:/etc/letsencrypt' -v '/var/log/letsencrypt:/var/log/letsencrypt' -v '/var/www/letsencrypt:/var/www/letsencrypt' certbot/certbot renew && docker exec proxy service nginx reload > /dev/null"
+
   handlers:
+
+    - name: Reload proxy
+      command: docker exec proxy service nginx reload
 
     - name: Reload UFW
       ufw:
