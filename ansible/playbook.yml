@@ -18,6 +18,7 @@
         package:
           - fail2ban
           - git
+          - rsync
           - ufw
           - unattended-upgrades
           - vim
