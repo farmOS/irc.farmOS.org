@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>farmOS.org</title>
+    <description>Public posts from @farmOS@fosstodon.org</description>
+    <link>https://fosstodon.org/@farmOS</link>
+    <image>
+      <url>https://cdn.fosstodon.org/accounts/avatars/109/321/909/625/316/786/original/763a2ed219103fd0.jpg</url>
+      <title>farmOS.org</title>
+      <link>https://fosstodon.org/@farmOS</link>
+    </image>
+    <lastBuildDate>Wed, 21 Oct 2026 20:24:00 +0000</lastBuildDate>
+    <webfeeds:icon>https://cdn.fosstodon.org/accounts/avatars/109/321/909/625/316/786/original/763a2ed219103fd0.jpg</webfeeds:icon>
+    <generator>Mastodon v4.7.3</generator>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117480766864583260</guid>
+      <link>https://fosstodon.org/@farmOS/117480766864583260</link>
+      <pubDate>Wed, 21 Oct 2026 20:24:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 3.5.9 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/3.5.9" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/3.5.9&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117480435771018286</guid>
+      <link>https://fosstodon.org/@farmOS/117480435771018286</link>
+      <pubDate>Wed, 21 Oct 2026 18:59:48 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.9 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.9" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.9&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117441524158528043</guid>
+      <link>https://fosstodon.org/@farmOS/117441524158528043</link>
+      <pubDate>Wed, 14 Oct 2026 22:04:04 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.8 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.8" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.8&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117441410784817744</guid>
+      <link>https://fosstodon.org/@farmOS/117441410784817744</link>
+      <pubDate>Wed, 14 Oct 2026 21:35:14 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 3.5.7 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/3.5.7" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/3.5.7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117439686677770597</guid>
+      <link>https://fosstodon.org/@farmOS/117439686677770597</link>
+      <pubDate>Wed, 14 Oct 2026 14:16:46 +0000</pubDate>
+      <description>&lt;p&gt;The &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; monthly community call is today at 2pm Eastern. All are welcome! &lt;a href="https://farmos.org/community/monthly-call/" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.org/community/monthly-c&lt;/span&gt;&lt;span class="invisible"&gt;all/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117411412915390481</guid>
+      <link>https://fosstodon.org/@farmOS/117411412915390481</link>
+      <pubDate>Fri, 09 Oct 2026 14:26:23 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.7 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.7" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117288716640692045</guid>
+      <link>https://fosstodon.org/@farmOS/117288716640692045</link>
+      <pubDate>Thu, 17 Sep 2026 22:23:06 +0000</pubDate>
+      <description>&lt;p&gt;Starting work on a new &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; module for generating demo data! This will help new users understand the options, and provide tooling for automated testing. Join next week&amp;#39;s development call to join the process! &lt;a href="https://farmos.discourse.group/t/farmos-demo-records-module/2606" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.discourse.group/t/farmo&lt;/span&gt;&lt;span class="invisible"&gt;s-demo-records-module/2606&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117282355478867726</guid>
+      <link>https://fosstodon.org/@farmOS/117282355478867726</link>
+      <pubDate>Wed, 16 Sep 2026 19:25:23 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.6 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.6" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.6&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117282284158834420</guid>
+      <link>https://fosstodon.org/@farmOS/117282284158834420</link>
+      <pubDate>Wed, 16 Sep 2026 19:07:14 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 3.5.6 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/3.5.6" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/3.5.6&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117254316144641034</guid>
+      <link>https://fosstodon.org/@farmOS/117254316144641034</link>
+      <pubDate>Fri, 11 Sep 2026 20:34:36 +0000</pubDate>
+      <description>&lt;p&gt;Asset Merge - A new &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; community module for merging duplicate assets: &lt;a href="https://www.drupal.org/project/farm_asset_merge" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://www.&lt;/span&gt;&lt;span class="ellipsis"&gt;drupal.org/project/farm_asset_&lt;/span&gt;&lt;span class="invisible"&gt;merge&lt;/span&gt;&lt;/a&gt; (thanks &lt;span class="h-card" translate="no"&gt;&lt;a href="https://drupal.community/@pcambra" class="u-url mention"&gt;@&lt;span&gt;pcambra&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;!)&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117241282864942866</guid>
+      <link>https://fosstodon.org/@farmOS/117241282864942866</link>
+      <pubDate>Wed, 09 Sep 2026 13:20:04 +0000</pubDate>
+      <description>&lt;p&gt;The &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; monthly community call is today at 2pm Eastern. All are welcome! &lt;a href="https://farmos.org/community/monthly-call/" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.org/community/monthly-c&lt;/span&gt;&lt;span class="invisible"&gt;all/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117167722332201236</guid>
+      <link>https://fosstodon.org/@farmOS/117167722332201236</link>
+      <pubDate>Thu, 27 Aug 2026 13:32:40 +0000</pubDate>
+      <description>&lt;p&gt;We are seeing a surge in AI-generated projects calling themselves &amp;quot;FarmOS&amp;quot;. Thankfully we were proactive about registering the &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; trademark and establishing community guidelines for its use (&lt;a href="https://farmOS.org/community/trademark/" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class=""&gt;farmOS.org/community/trademark/&lt;/span&gt;&lt;span class="invisible"&gt;&lt;/span&gt;&lt;/a&gt;). Enforcing it takes time away from more important work, though. Are other &lt;a href="https://fosstodon.org/tags/opensource" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;opensource&lt;/span&gt;&lt;/a&gt; projects experiencing this?&lt;/p&gt;</description>
+      <category>farmos</category>
+      <category>OpenSource</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117167700577282365</guid>
+      <link>https://fosstodon.org/@farmOS/117167700577282365</link>
+      <pubDate>Thu, 27 Aug 2026 13:27:08 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 3.5.5 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/3.5.5" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/3.5.5&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117163675336204782</guid>
+      <link>https://fosstodon.org/@farmOS/117163675336204782</link>
+      <pubDate>Wed, 26 Aug 2026 20:23:27 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.5 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.5" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.5&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/117081937971970293</guid>
+      <link>https://fosstodon.org/@farmOS/117081937971970293</link>
+      <pubDate>Wed, 12 Aug 2026 09:56:34 +0000</pubDate>
+      <description>&lt;p&gt;The &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; monthly community call is today at 2pm Eastern. All are welcome! &lt;a href="https://farmos.org/community/monthly-call/" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.org/community/monthly-c&lt;/span&gt;&lt;span class="invisible"&gt;all/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/116930358041400550</guid>
+      <link>https://fosstodon.org/@farmOS/116930358041400550</link>
+      <pubDate>Thu, 16 Jul 2026 15:27:48 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.4 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.4" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.4&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/116891117300412703</guid>
+      <link>https://fosstodon.org/@farmOS/116891117300412703</link>
+      <pubDate>Thu, 09 Jul 2026 17:08:22 +0000</pubDate>
+      <description>&lt;p&gt;Poll for the &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; community: Monthly call and dev call timing check-in? &lt;a href="https://farmos.discourse.group/t/monthly-call-and-dev-call-timing-check-in/2557" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.discourse.group/t/month&lt;/span&gt;&lt;span class="invisible"&gt;ly-call-and-dev-call-timing-check-in/2557&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/116884005216164135</guid>
+      <link>https://fosstodon.org/@farmOS/116884005216164135</link>
+      <pubDate>Wed, 08 Jul 2026 10:59:40 +0000</pubDate>
+      <description>&lt;p&gt;The &lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; monthly community call is today at 2pm Eastern. All are welcome! &lt;a href="https://farmos.org/community/monthly-call/" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;farmos.org/community/monthly-c&lt;/span&gt;&lt;span class="invisible"&gt;all/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/116773279249602815</guid>
+      <link>https://fosstodon.org/@farmOS/116773279249602815</link>
+      <pubDate>Thu, 18 Jun 2026 21:40:36 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 4.0.3 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/4.0.3" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/4.0.3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://fosstodon.org/@farmOS/116772572816309676</guid>
+      <link>https://fosstodon.org/@farmOS/116772572816309676</link>
+      <pubDate>Thu, 18 Jun 2026 18:40:56 +0000</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fosstodon.org/tags/farmOS" class="mention hashtag" rel="tag"&gt;#&lt;span&gt;farmOS&lt;/span&gt;&lt;/a&gt; 3.5.4 has been released! &lt;a href="https://github.com/farmOS/farmOS/releases/3.5.4" target="_blank" rel="nofollow noopener" translate="no"&gt;&lt;span class="invisible"&gt;https://&lt;/span&gt;&lt;span class="ellipsis"&gt;github.com/farmOS/farmOS/relea&lt;/span&gt;&lt;span class="invisible"&gt;ses/3.5.4&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <category>farmos</category>
+    </item>
+  </channel>
+</rss>
